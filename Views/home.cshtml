@@ -4,7 +4,4 @@
 	Layout = "master.cshtml";
 }
 
-@* the fun starts here *@
-
-<h1>@Model.Title</h1>
-<h2>@Model.Subheading</h2>
+@(!string.IsNullOrWhiteSpace(Model.PageTitle) ? Model.PageTitle : Model.Name)

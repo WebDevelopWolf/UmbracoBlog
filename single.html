@@ -1,8 +1,3 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
-@{
-	Layout = null;
-}
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -13,14 +8,14 @@
     <!--[if IE]>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <![endif]-->
-    <title>Blog</title>
+    <title>Minimal Bootstrap Blog Theme</title>
     <!-- BOOTSTRAP CORE STYLE CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLE CSS -->
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
     <!-- CUSTOM STYLE CSS -->
     <link href="assets/css/style.css" rel="stylesheet" />
-    <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+     <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -43,10 +38,7 @@
                             <a href="#" class="btn btn-social ">
                                 <i class="fa fa-linkedin fa-2x"></i></a>
                         </div>
-                        <a class="logo" href="index.html">
-                            <h1>Blog</h1>
-                        </a>
-
+                     <a class="logo" href="index.html"><h1> Minimal</h1></a>   
 
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipi elit.
@@ -70,18 +62,15 @@ Mauris sagit felis dolor vitae. <a href="#">explore </a>
     </section>
     <!-- HEAD SECTION END-->
     <section id="blog">
-		@RenderBody()
         <div class="container">
-            <div class="row ">
+           
+               <div class="row ">
                 <div class="blog-wrapper">
 
-                    <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
-                        <img src="assets/img/1.jpg" class="img-circle img-blog" />
-
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-1">
+                   
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-4 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
                         <div class="custom-blog">
-                            <h1>Nunc mattis dignissim nisi eu euismod. Curabitur tempor fermentum aliquam.</h1>
+                            <h1> Fusce vehicula magna at turpis tempus, non sodales metus gravida.</h1>
                             <div>
                                 <ol class="breadcrumb">
                                     <li><a href="#">In : Entertainment</a></li>
@@ -89,111 +78,91 @@ Mauris sagit felis dolor vitae. <a href="#">explore </a>
                                 </ol>
                             </div>
                             <p>
-                                Fusce vehicula magna at turpis tempus, non sodales metus gravida.
-                                Sed venenatis vehicula magna, eget consequat ipsum varius eu.
-                                Nunc mattis dignissim nisi eu euismod. Curabitur tempor fermentum aliquam.
-                                Praesent volutpat dui vel augue volutpat, posuere interdum neque pellentesque.
-                                Etiam vel risus magna. Sed varius diam velit, non varius mi ultricies ut.
-                                Nam facilisis justo a sapien laoreet interdum. Nulla facilisi.
-
-                            </p>
-
-                            <a class="btn btn-info" href="single.html">Read More </a>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <!--ROW OF BLOG POST END-->
-            <div class="row ">
-                <div class="blog-wrapper">
-
-                    <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
-                        <img src="assets/img/2.jpg" class="img-circle img-blog" />
-
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-1">
-                        <div class="custom-blog">
-                            <h1>Mattis dignissim nisi eu euismod urabitur.</h1>
-                            <div>
-                                <ol class="breadcrumb">
-                                    <li><a href="#">In : Entertainment</a></li>
-                                    <li><a href="#">On : 23 <sup>rd</sup> March 2015</a></li>
-                                </ol>
-                            </div>
-                            <p>
-                                Fusce vehicula magna at turpis tempus, non sodales metus gravida.
-                                Sed venenatis vehicula magna, eget consequat ipsum varius eu.
-                                Nunc mattis dignissim nisi eu euismod. Curabitur tempor fermentum aliquam.
-                                Praesent volutpat dui vel augue volutpat, posuere interdum neque pellentesque.
-
-                            </p>
-
-                            <a class="btn btn-info" href="single.html">Read More </a>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <!--ROW OF BLOG POST END-->
-            <div class="row ">
-                <div class="blog-wrapper">
-
-                    <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
-                        <img src="assets/img/3.jpg" class="img-circle img-blog" />
-
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-1">
-                        <div class="custom-blog">
-                            <h1>Fusce vehicula magna at turpis tempus, non sodales metus gravida.</h1>
-                            <div>
-                                <ol class="breadcrumb">
-                                    <li><a href="#">In : Entertainment</a></li>
-                                    <li><a href="#">On : 23 <sup>rd</sup> March 2015</a></li>
-                                </ol>
-                            </div>
-                            <p>
+                               
                                 Sed venenatis vehicula magna, eget consequat ipsum varius eu.
                                 Nunc mattis dignissim nisi eu euismod. Curabitur tempor fermentum aliquam.
                                 Praesent volutpat dui vel augue volutpat, posuere interdum neque pellentesque.
                                 Nunc mattis dignissim nisi eu euismod. Curabitur tempor fermentum aliquam.
 
                             </p>
+                            <img src="assets/img/4.jpg" class="img-responsive" />
+                            <br />
+                             <p class="text-info">
+                               
+                                Sed venenatis vehicula magna, eget consequat ipsum varius eu.
+                                Nunc mattis dignissim nisi eu euismod. Curabitur tempor fermentum aliquam.
+                                Praesent volutpat dui vel augue volutpat, posuere interdum neque pellentesque.
+                                Nunc mattis dignissim nisi eu euismod. Curabitur tempor fermentum aliquam.
 
-                            <a class="btn btn-info" href="single.html">Read More </a>
+                            </p>
+                             <p >
+                               
+                                Sed venenatis vehicula magna, eget consequat ipsum varius eu.
+                                Nunc mattis dignissim nisi eu euismod. Curabitur tempor fermentum aliquam.
+                                Praesent volutpat dui vel augue volutpat, posuere interdum neque pellentesque.
+                                Nunc mattis dignissim nisi eu euismod. Curabitur tempor fermentum aliquam.
+                                 Sed venenatis vehicula magna, eget consequat ipsum varius eu.
+                                Nunc mattis dignissim nisi eu euismod. Curabitur tempor fermentum aliquam.
+                                Praesent volutpat dui vel augue volutpat, posuere interdum neque pellentesque.
+                                Nunc mattis dignissim nisi eu euismod. Curabitur tempor fermentum aliquam.
+                                 Sed venenatis vehicula magna, eget consequat ipsum varius eu.
+                                Nunc mattis dignissim nisi eu euismod. Curabitur tempor fermentum aliquam.
+                                Praesent volutpat dui vel augue volutpat, posuere interdum neque pellentesque.
+                                Nunc mattis dignissim nisi eu euismod. Curabitur tempor fermentum aliquam.
+
+                            </p>
+                             <p class="text-muted">
+                               
+                                Sed venenatis vehicula magna, eget consequat ipsum varius eu.
+                                Nunc mattis dignissim nisi eu euismod. Curabitur tempor fermentum aliquam.
+                                Praesent volutpat dui vel augue volutpat, posuere interdum neque pellentesque.
+                                Nunc mattis dignissim nisi eu euismod. Curabitur tempor fermentum aliquam.
+
+                            </p>
+                            <a class="btn btn-info" href="index.html">Back To Home </a>
                         </div>
 
                     </div>
                 </div>
 
             </div>
-            <!--ROW OF BLOG POST END-->
+            <!--SINGLE POST END-->
             <div class="row page-set">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <nav>
-                        <ul class="pagination">
-                            <li>
-                                <a href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </a>
-                            </li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li>
-                                <a href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                    <div class="comment-sec">
+                        <h1>Recent Comments</h1>
+                        <div class="comment-wrapper">
+                            <h4>Jhon Golitak</h4> <small>12<sup>th</sup> May 2015</small>
+                        <p>
+                                Sed venenatis vehicula magna, eget consequat ipsum varius eu. eget consequat ipsum varius eu.
+                        </p>
+                        </div>
+                         <div class="comment-wrapper">
+                            <h4>Roshak Denial Sui</h4> <small>12<sup>th</sup> May 2015</small>
+                        <p>
+                                Sed venenatis vehicula magna, eget consequat ipsum varius eu. eget consequat ipsum varius eu.
+                        </p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
+             <!--COMMENTS END-->
+             <div class="row page-set">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                    <div class="comment-sec">
+                        <h1>- SAY IT -</h1>
+                          <div class="panel panel-info set-post" >
+                            <input type="text" class="form-control" placeholder="Enter Your Name" />
+                              <hr />
+                       <textarea rows="3" class="form-control" placeholder="Enter Your Comment" ></textarea>
+                              <br />
+                              <button type="submit" class="btn btn-info btn-lg" >SUBMIT COMMENT</button> 
+                        </div>
+                        </div>
+                    </div>
+                 </div>
+             <!--POST COMMENT-->
         </div>
 
     </section>
@@ -202,7 +171,7 @@ Mauris sagit felis dolor vitae. <a href="#">explore </a>
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    &copy; 2015 YourDomain.com | by<a href="http://www.designbootstrap.com/" target="_blank"> DesignBootstrap </a>
+                    &copy; 2015 YourDomain.com | by<a href="http://www.designbootstrap.com/" target="_blank">DesignBootstrap </a>
                 </div>
             </div>
         </div>
@@ -215,5 +184,3 @@ Mauris sagit felis dolor vitae. <a href="#">explore </a>
     <script src="assets/js/bootstrap.js"></script>
 </body>
 </html>
-
-

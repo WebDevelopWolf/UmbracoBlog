@@ -17,14 +17,14 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "66227e4de1a7dbd4")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "904e42228d981a4")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>Home</summary>
 	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel, IHeadingControls
+	public partial class Home : PublishedContentModel, IPageProperties
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -48,79 +48,57 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Subheading: Enter a sub-heading...
+		/// PageTitle: This is the title of the current page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.0")]
-		[ImplementPropertyType("subheading")]
-		public string Subheading => global::Umbraco.Web.PublishedModels.HeadingControls.GetSubheading(this);
-
-		///<summary>
-		/// Title: Enter a title...
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.0")]
-		[ImplementPropertyType("title")]
-		public string Title => global::Umbraco.Web.PublishedModels.HeadingControls.GetTitle(this);
+		[ImplementPropertyType("pageTitle")]
+		public string PageTitle => global::Umbraco.Web.PublishedModels.PageProperties.GetPageTitle(this);
 	}
 
-	// Mixin Content Type with alias "headingControls"
-	/// <summary>Heading Controls</summary>
-	public partial interface IHeadingControls : IPublishedContent
+	// Mixin Content Type with alias "pageProperties"
+	/// <summary>Page Properties</summary>
+	public partial interface IPageProperties : IPublishedContent
 	{
-		/// <summary>Subheading</summary>
+		/// <summary>PageTitle</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.0")]
-		string Subheading { get; }
-
-		/// <summary>Title</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.0")]
-		string Title { get; }
+		string PageTitle { get; }
 	}
 
-	/// <summary>Heading Controls</summary>
-	[PublishedModel("headingControls")]
-	public partial class HeadingControls : PublishedContentModel, IHeadingControls
+	/// <summary>Page Properties</summary>
+	[PublishedModel("pageProperties")]
+	public partial class PageProperties : PublishedContentModel, IPageProperties
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.0")]
-		public new const string ModelTypeAlias = "headingControls";
+		public new const string ModelTypeAlias = "pageProperties";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<HeadingControls, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<PageProperties, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public HeadingControls(IPublishedContent content)
+		public PageProperties(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Subheading: Enter a sub-heading...
+		/// PageTitle: This is the title of the current page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.0")]
-		[ImplementPropertyType("subheading")]
-		public string Subheading => GetSubheading(this);
+		[ImplementPropertyType("pageTitle")]
+		public string PageTitle => GetPageTitle(this);
 
-		/// <summary>Static getter for Subheading</summary>
+		/// <summary>Static getter for PageTitle</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.0")]
-		public static string GetSubheading(IHeadingControls that) => that.Value<string>("subheading");
-
-		///<summary>
-		/// Title: Enter a title...
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.0")]
-		[ImplementPropertyType("title")]
-		public string Title => GetTitle(this);
-
-		/// <summary>Static getter for Title</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.0")]
-		public static string GetTitle(IHeadingControls that) => that.Value<string>("title");
+		public static string GetPageTitle(IPageProperties that) => that.Value<string>("pageTitle");
 	}
 
 	/// <summary>Folder</summary>
